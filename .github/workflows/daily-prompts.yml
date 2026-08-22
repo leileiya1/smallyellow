@@ -28,12 +28,12 @@ jobs:
       CONTENT_TIMEZONE: Asia/Shanghai
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -58,4 +58,3 @@ jobs:
           git config user.email "smallyellow-bot@users.noreply.github.com"
           git commit -m "content: generate daily image prompts"
           git push origin HEAD:main
-
